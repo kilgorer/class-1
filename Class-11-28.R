@@ -1,0 +1,1 @@
+anscombe %>% mutate(.id = row_number()) %>% gather(key, value, -.id) %>% as_tibble() %>% separate(key, into = c('var', 'set'), sep = 1) %>% select(-.id)
